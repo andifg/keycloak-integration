@@ -10,8 +10,15 @@ const oidcConfig = {
   authority: "http://localhost:8080/realms/Demo",
   client_id: "react-app",
   redirect_uri: "http://localhost:5173",
+  
   // ...
 };
+
+
+function onSigninCallback() {
+  window.location.href = "/";
+}
+
 
 
 function App() {
@@ -19,9 +26,9 @@ function App() {
   return (
     <>
     <h1>React App</h1>
-    <AuthProvider {...oidcConfig}>
+    <AuthProvider {...oidcConfig} onSigninCallback={onSigninCallback}>
       <Application />
-    </AuthProvider>,
+    </AuthProvider>
     </>
   )
 }

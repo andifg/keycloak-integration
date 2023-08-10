@@ -7,10 +7,11 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./keycloak.conf:/opt/keycloak/conf/keycloak.conf
+      - ./realms:/opt/keycloak/data/import
     ports:
       - 8080:8080
     command:
-      - start-dev
+      - start-dev --import-realm
     environment:
       - KEYCLOAK_ADMIN=admin
       - KEYCLOAK_ADMIN_PASSWORD=changeme
