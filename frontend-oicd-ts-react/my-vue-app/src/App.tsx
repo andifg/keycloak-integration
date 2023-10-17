@@ -10,7 +10,7 @@ const oidcConfig = {
   authority: "http://localhost:8080/realms/Demo",
   client_id: "react-app",
   redirect_uri: "http://localhost:5173",
-  
+
   // ...
 };
 

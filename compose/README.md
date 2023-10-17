@@ -9,11 +9,11 @@ Configuration example for Keycloak using Docker Compose:
 
 ## How-To
 
-1. Create Virtual Machine 
+1. Create Virtual Machine
     * add ssh-keys for login
     * disable _root_ login & _default_ user
     * enable ssh & web / https security groups
-1b. Add DNS alias 
+1b. Add DNS alias
 2. Install Docker w/ docker-compose
     * follow [Official Docker Documentation](https://docs.docker.com/engine/install/ubuntu/#set-up-the-repository)
     * compose plugin:
@@ -26,20 +26,29 @@ Configuration example for Keycloak using Docker Compose:
 4. Change into dir
     * `cd keycloak-docker-compose`
 5. adjust environment
-    * `VIRTUAL_HOST` 
+    * `VIRTUAL_HOST`
     * `LETSENCRYPT_HOST`
     * `KEYCLOAK_ADMIN`
     * `KEYCLOAK_ADMIN_PASSWORD`
 
 6. start docker-compose
     `docker compose up -d`
-7. visit Keycloak Website 
+7. visit Keycloak Website
     * https://vm-hostname.domain.com
 
 ## Containers
 
 * Keycloak
     version 21
-* Nginx Proxy 
+* Nginx Proxy
 * Proxy Companion
 * Postgres Database
+
+
+Export:
+
+In container
+
+```bash
+/opt/keycloak/bin/kc.sh export --file /tmp/coffee-app-realm.json --realm Coffee-App
+```
