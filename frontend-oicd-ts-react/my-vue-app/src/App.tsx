@@ -7,7 +7,7 @@ import Application from "./Application";
 
 
 const oidcConfig = {
-  authority: "http://localhost:8080/realms/Demo",
+  authority: "http://localhost:8080/realms/Coffee-App",
   client_id: "react-app",
   redirect_uri: "http://localhost:5173",
 

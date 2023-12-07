@@ -52,3 +52,7 @@ In container
 ```bash
 /opt/keycloak/bin/kc.sh export --file /tmp/coffee-app-realm.json --realm Coffee-App
 ```
+
+```
+docker cp <id>:/tmp/coffee-app-realm.json .
+```
